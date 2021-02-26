@@ -8,6 +8,7 @@
 # testing
 /coverage
 
+# songs folder 
 public/songs
 
 # production
