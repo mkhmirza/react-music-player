@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Details from "./Details";
-import Record from "../record.png";
+import Record from "../imgs/record.png";
 import Controls from "./Controls";
 
 export default function Player(props) {
@@ -48,8 +48,18 @@ export default function Player(props) {
 
   return (
     <div>
-      <img class={isPlaying ? "rotate" : ""} src={Record} alt="" srcset="" />
-      <audio ref={audioEl} src={props.songs[props.currentSongIndex].src} />
+      <div className="parent">
+        <img
+          className={isPlaying ? "rotate" : "image1"}
+          src={Record}
+          width="500"
+        />
+      </div>
+      <audio
+        ref={audioEl}
+        src={props.songs[props.currentSongIndex].src}
+        onEnded={() => props.setCurrentSongIndex(props.currentSongIndex + 1)}
+      />
       <Details song={props.songs[props.currentSongIndex]} />
       <Controls
         SkipSong={SkipSong}

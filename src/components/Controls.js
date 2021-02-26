@@ -1,4 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPlay,
+  faPause,
+  faForward,
+  faBackward,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Controls(props) {
   function play() {
@@ -8,14 +15,14 @@ export default function Controls(props) {
 
   return (
     <>
-      <button class="btn" onClick={() => props.SkipSong(false)}>
-        Backward
+      <button className="btn" onClick={() => props.SkipSong(false)}>
+        <FontAwesomeIcon icon={faBackward} />
       </button>
-      <button class="btn" onClick={play}>
-        {props.isPlaying ? "Stop" : "Start"}
+      <button className="btn" onClick={play}>
+        <FontAwesomeIcon icon={props.isPlaying ? faPause : faPlay} />
       </button>
-      <button class="btn" onClick={() => props.SkipSong()}>
-        Forward
+      <button className="btn" onClick={() => props.SkipSong()}>
+        <FontAwesomeIcon icon={faForward} />
       </button>
     </>
   );

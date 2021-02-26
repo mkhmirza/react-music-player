@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <div className="heading">
-        <h3 className="neon">Juke House</h3>
+        <h3 className="neon">Music House</h3>
       </div>
 
       <Player

@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #121212;
+  background: url(./imgs/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: whitesmoke;
   text-align: center;
 }
@@ -13,6 +15,31 @@ body {
 .rotate {
   animation: rotation 8s infinite linear;
   margin-top: 2px;
+  position: relative;
+  top: auto;
+  left: auto;
+  opacity: 0.7;
+}
+
+.parent {
+  position: relative;
+  top: auto;
+  left: auto;
+  text-align: center;
+}
+.image1 {
+  position: relative;
+  top: auto;
+  left: auto;
+  opacity: 0.7;
+}
+
+.image2 {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-left: -140px;
+  margin-top: 130px;
 }
 
 @keyframes rotation {
@@ -74,10 +101,15 @@ body {
 }
 
 .btn {
-  width: 100px;
+  width: 50px;
   height: 50px;
   padding: 5px;
   margin-right: 5px;
-  background-color: #0d47a1;
+  background-color: Transparent;
+  background-repeat: no-repeat;
   color: #fff;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }
